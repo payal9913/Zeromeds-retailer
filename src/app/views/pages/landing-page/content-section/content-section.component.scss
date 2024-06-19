@@ -1,0 +1,310 @@
+// <uniquifier>: Use a unique and descriptive class name
+
+h1 {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.fact-item {
+    position: relative;
+    overflow: hidden;
+    transition: border-bottom 0.5s ease;
+    /* Smooth transition for bottom border change */
+}
+
+.fact-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    /* Height of the bottom border */
+    background-color: transparent;
+    /* Initial color of the bottom border */
+    transition: background-color 0.5s ease;
+    /* Smooth transition for color change */
+}
+
+.fact-item-1:hover::after {
+    background-color: #0c7b9a;
+    /* Color of the bottom border on hover */
+}
+
+.fact-item-2:hover::after {
+    background-color: red;
+    /* Color of the bottom border on hover */
+}
+
+.fact-item-3:hover::after {
+    background-color: green;
+    /* Color of the bottom border on hover */
+}
+
+.fact-item-4:hover::after {
+    background-color: purple;
+    /* Color of the bottom border on hover */
+}
+
+.fadInUp:hover {
+    background-color: #0c7b9a;
+}
+
+.card-left {
+    border: none;
+    cursor: pointer;
+    border-left: 3px solid #dbd9d9;
+    /* Gray color (hex code) */
+    padding-left: 15px;
+    transition: border-color 0.3s ease;
+}
+
+.card-left:hover {
+    border-left-color: #0c7b9a;
+    background-color: rgb(234, 249, 249);
+}
+
+.card-left.active {
+    border-left-color: #0c7b9a;
+    /* Blue border for active card */
+    transition: border-color 0.3s ease;
+    background-color: rgb(210, 232, 241);
+}
+
+
+.forBorder-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.forBorder {
+    position: relative;
+}
+
+.forBorder::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 1.5px;
+    background-color: #0c7b9a;
+}
+
+.forBorder-faq::after {
+    width: 400px;
+}
+
+.card.card-faq {
+    border: none;
+}
+
+button.accordion-button:hover{
+    color: #0c7b9a;
+    border:none
+    // font-weight: 500;
+}
+
+.card-faq-body {
+    border: none;
+}
+
+.accordion-item {
+    border: none;
+    border-bottom:1px solid rgba(151, 151, 151, 0.303);
+}
+
+
+:host ::ng-deep {
+    .product-item {
+        .product-item-content {
+            border: 1px solid var(--surface-d);
+            border-radius: 3px;
+            margin: .3rem;
+            text-align: center;
+            padding: 2rem 0;
+        }
+    
+        .product-image {
+            width: 50%;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
+        }
+    }
+}
+
+//brand Carousel
+.prime-carousel {
+  width: 171px; /* Set width of each card */
+  height: 98px; /* Set height of each card */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.prime-carousel img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+}
+
+//brand carousel
+
+.container-fluid.offer{
+    background-image:url('../../../../../assets/images/offers/offer-background.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+//Counters starts
+.counter{
+    color: #eb3b5a;
+    font-family: 'Muli', sans-serif;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    border-radius: 100%;
+    padding: 77px 32px 40px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    
+}
+
+.counter:before,
+.counter:after{
+    content: "";
+    background: #fff;
+    width: 80%;
+    height: 80%;
+    border-radius: 100%;
+    box-shadow: -5px 5px 5px rgba(0,0,0,0.3);
+    transform: translateX(-50%)translateY(-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+}
+.counter:after{
+    background: linear-gradient(45deg,#B81242 49%, #D74A75 50%);
+    width: 100%;
+    height: 100%;
+    box-shadow: none;
+    transform: translate(0);
+    top: 0;
+    left: 0;
+    z-index: -2;
+    clip-path: polygon(50% 50%, 50% 0, 100% 0, 100% 100%, 0 100%, 0 50%);
+}
+.counter .counter-icon{
+    color: #fff;
+    background: linear-gradient(45deg,#B81242 49%, #D74A75 50%);
+    font-size: 33px;
+    line-height: 70px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: absolute;
+    top:  0;
+    left: 0;
+    z-index: 1;
+    transition: all 0.3s;
+}
+.counter .counter-icon i.fa{
+    transform: rotateX(0deg);
+    transition: all 0.3s ease 0s;
+}
+.counter:hover .counter-icon i.fa{ transform: rotateX(360deg); }
+.counter h3{
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 3px;
+}
+.counter .counter-value{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.counter.dark-blue{ color: #0E2954; }
+.counter.dark-blue:after,
+.counter.dark-blue .counter-icon{
+    background: linear-gradient(45deg,#0E2954 49%,#1F6E8C 50%);
+}
+
+.counter.light-blue{ color: #1F6E8C; }
+.counter.light-blue:after,
+.counter.light-blue .counter-icon{
+    background: linear-gradient(45deg,#1F6E8C 49%,#2E8A99 50%);
+}
+
+.counter.dark-green{ color: #2E8A99; }
+.counter.dark-green:after,
+.counter.dark-green .counter-icon{
+    background: linear-gradient(45deg,#2E8A99 49%,#64CCC5 50%);
+}
+
+.counter.light-green{ color: #64CCC5; }
+.counter.light-green:after,
+.counter.light-green .counter-icon{
+    background: linear-gradient(45deg,#64CCC5 49%,#a4cac7 50%);
+}
+
+@media screen and (max-width:990px){
+    .counter{ margin-bottom: 40px; }
+}
+
+// counter ends
+
+//contact starts
+.gradient-brand-color {
+    background-image: -webkit-linear-gradient(0deg, #016b87 0%, #76b1c1 100%);
+    background-image: -ms-linear-gradient(0deg, #016b87 0%, #76b1c1 100%);
+    color: #fff;
+}
+.contact-info__wrapper {
+    overflow: hidden;
+    border-radius: .625rem .625rem 0 0
+}
+
+@media (min-width: 1024px) {
+    .contact-info__wrapper {
+        border-radius: 0 .625rem .625rem 0;
+        padding: 5rem !important
+    }
+}
+.contact-info__list span.position-absolute {
+    left: 0
+}
+.z-index-101 {
+    z-index: 101;
+}
+.list-style--none {
+    list-style: none;
+}
+.contact__wrapper {
+    background-color: #fff;
+    border-radius: 0 0 .625rem .625rem
+}
+
+@media (min-width: 1024px) {
+    .contact__wrapper {
+        border-radius: .625rem 0 .625rem .625rem
+    }
+}
+@media (min-width: 1024px) {
+    .contact-form__wrapper {
+        padding: 5rem !important
+    }
+}
+.shadow-lg, .shadow-lg--on-hover:hover {
+    box-shadow: 0 1rem 3rem rgba(132,138,163,0.1) !important;
+}
+
+// contact us ends
